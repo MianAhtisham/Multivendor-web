@@ -4,6 +4,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { RxAvatar } from "react-icons/rx";
 import styles from "../../styles/styles";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -14,6 +15,7 @@ const Signup = () => {
 
   const handleFileInputChange = (e) => {
     const reader = new FileReader();
+
     reader.onload = () => {
       if (reader.readyState === 2) {
         setAvatar(reader.result);
@@ -24,9 +26,9 @@ const Signup = () => {
 
   const handleSubmit = (e) => {  
     e.preventDefault();
-    console.log({ name, email, password, avatar });
-    // Add form submission logic here
-  };
+   axios
+      .post(`${server}/user/create-user`)
+  }; f
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
