@@ -24,6 +24,13 @@ const Signup = () => {
     reader.readAsDataURL(e.target.files[0]);
   };
 
+  // const newForm = new FormData();
+
+  // newForm.append("file", avatar);
+  // newForm.append("name", name);
+  // newForm.append("email", email);
+  // newForm.append("password", password);
+
   const handleSubmit = (e) => {  
     e.preventDefault();
    axios
