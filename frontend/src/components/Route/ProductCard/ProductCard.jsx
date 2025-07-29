@@ -8,14 +8,14 @@ import {
 import { Link } from "react-router-dom";
 import styles from "../../../styles/styles";
 import { useDispatch, useSelector } from "react-redux";
-// import ProductDetailsCard from "../ProductDetailsCard/ProductDetailsCard";
+import ProductDetailsCard from "../ProductDetailsCard/ProductDetailsCard.jsx";
 import {
   addToWishlist,
   removeFromWishlist,
 } from "../../../redux/reducers/wishlist";
 import { addToCart } from "../../../redux/actions/cart";
 import { toast } from "react-toastify";
-// import Ratings from "../../Products/Ratings"
+import Ratings from "../../Products/Ratings";
 
 
 
@@ -81,7 +81,7 @@ const ProductCard = ({ data, isEvent }) => {
           </h4>
 
           <div className="flex">
-            {/* <Ratings rating={data?.ratings} /> */}
+            <Ratings rating={data?.ratings} />
           </div>
 
           <div className="py-2 flex items-center justify-between">
@@ -137,7 +137,7 @@ const ProductCard = ({ data, isEvent }) => {
             title="Add to cart"
           />
 
-          {/* {open && <ProductDetailsCard setOpen={setOpen} data={data} />} */}
+          {open && <ProductDetailsCard setOpen={setOpen} data={data} />}
         </div>
       </div>
     </>
