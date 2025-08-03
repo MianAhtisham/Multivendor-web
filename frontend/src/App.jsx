@@ -7,6 +7,7 @@ import {
   EventsPage,
   BestSellingPage,
   ProductsPage,
+  FAQPage,
 } from "./Routes.js";
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/events" element={<EventsPage />} />
           <Route path="/best-selling" element={<BestSellingPage />} />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/faq" element={<FAQPage />} />
         </Routes>
       </BrowserRouter>
     </div>

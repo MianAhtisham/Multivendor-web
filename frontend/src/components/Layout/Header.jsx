@@ -15,8 +15,8 @@ import styles from "../../styles/styles";
 import { categoriesData, productData } from "../../static/data";
 import DropDown from "./DropDown.jsx";
 import Navbar from "./Navbar.jsx";
-// import Cart from "../cart/Cart.jsx";
-// import Wishlist from "../Wishlist/Wishlist.jsx";
+import Cart from "../cart/Cart.jsx";
+import Wishlist from "../Wishlist/Wishlist.jsx";
 
 
 const Header = ({ activeHeading }) => {
